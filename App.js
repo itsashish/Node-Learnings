@@ -3,3 +3,5 @@ const obj = {
     address: "JP Nagar"
 }
 console.log(obj.name)
+
+//Comments
