@@ -1,5 +1,10 @@
-const obj = {
-    name: "Ashish",
-    address: "JP Nagar"
-}
-console.log(obj.name)
+
+var stuff = require('./stuff')
+console.log(stuff.counter(["Ashish","Mahesh", "Raju"]))
+
+console.log(stuff.add(5,6));
+
+console.log(stuff.add(stuff.pi,6));
+
+
+
