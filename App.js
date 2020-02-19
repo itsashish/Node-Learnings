@@ -1,13 +1,12 @@
 
-var events = require('events')
+var stuff = require('./stuff')
+console.log(stuff.counter(["Ashish","Mahesh", "Raju"]))
 
-var eventemiter = new events.EventEmitter();
+console.log(stuff.add(5,6));
 
-eventemiter.on("Newenvent",(mssg)=>{
-console.log(mssg);
-})
+console.log(stuff.add(stuff.pi,6));
 
-eventemiter.emit("Newenvent","Hello New Event")
+console.log(stuff.add(stuff.pi,9));
 
 
 
