@@ -1,12 +1,22 @@
 
-var stuff = require('./stuff')
-console.log(stuff.counter(["Ashish","Mahesh", "Raju"]))
+var events = require('events')
+var util = require('util');
 
-console.log(stuff.add(5,6));
+var Person = function(name){this.name = name;}
+util.inherits(Person,events.EventEmitter)
 
-console.log(stuff.add(stuff.pi,6));
+var ashish = new Person('ashish');
+var mahesh = new Person('mahesh');
+var raju = new Person('raju');
+var people = [ashish,mahesh,raju];
 
-console.log(stuff.add(stuff.pi,9));
+people.forEach((Person)=>{
+    Person.on('Speak',(mssg)=>{
 
+        console.log("The Person talking is: "+ Person.name +' ' + mssg);
+    });
+});
+
+ashish.emit('Speak','How are you dude ?');
 
 
