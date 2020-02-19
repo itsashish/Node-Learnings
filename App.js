@@ -16,7 +16,7 @@ people.forEach((Person)=>{
         console.log("The Person talking is: "+ Person.name +' ' + mssg);
     });
 });
-
+// Event emitter Module Commit
 ashish.emit('Speak','How are you dude ?');
 
 
