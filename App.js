@@ -1,8 +1,8 @@
 var fs = require('fs');
 
-fs.writeFile("sample.txt",'My sample text Updated with Async Call',()=>{
+fs.writeFile("Newsample.txt",'My Newsample text Updated with Async Call',()=>{
 
-    var readme = fs.readFileSync('sample.txt','utf8');
+    var readme = fs.readFileSync('Newsample.txt','utf8');
     
     console.log(readme);
 })
