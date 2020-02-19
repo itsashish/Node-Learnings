@@ -1,9 +1,11 @@
 var fs = require('fs');
 
-fs.writeFile("Newsample.txt",'My Newsample text Updated with Async Call',()=>{
-
-    var readme = fs.readFileSync('Newsample.txt','utf8');
-    
-    console.log(readme);
+//fs.mkdirSync("New Folder")
+//fs.rmdirSync("New Folder")
+fs.unlinkSync('./New Folder/NewSampleFile.txt')
+fs.mkdir('New Folder',()=>{
+    fs.readFile('NewSample.txt','utf8',(eroor,data)=>{
+        fs.writeFileSync('./New Folder/NewSampleFile.txt',data)
+    })
 })
 
