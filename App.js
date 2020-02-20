@@ -1,11 +1,12 @@
-var fs = require('fs');
+var http = require('http');
 
-//fs.mkdirSync("New Folder")
-//fs.rmdirSync("New Folder")
-fs.unlinkSync('./New Folder/NewSampleFile.txt')
-fs.mkdir('New Folder',()=>{
-    fs.readFile('NewSample.txt','utf8',(eroor,data)=>{
-        fs.writeFileSync('./New Folder/NewSampleFile.txt',data)
-    })
-})
+var server = http.createServer((req,res)=>{
+    
+    console.log('request was made: ' + req.url)
 
+    res.writeHead(200,{'Content-Type':'text/plain'});
+    res.end("Hey Dude!")
+});
+
+server.listen(3000,'127.0.0.1');
+console.log('Port number: 3000 is UP!')
