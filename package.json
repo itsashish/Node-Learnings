@@ -4,7 +4,7 @@
   "description": "My first node project",
   "main": "main.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "yargs": "^15.1.0"
   },
   "devDependencies": {},
